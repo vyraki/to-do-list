@@ -1,0 +1,166 @@
+/* Gaya umum untuk seluruh halaman */
+body {
+    font-family: Arial, sans-serif; /* Mengatur jenis font */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #c2e59c, #64b3f4); /* Latar belakang dengan gradasi warna */
+    color: #333; /* Warna teks default */
+    line-height: 1.6; /* Mengatur jarak antar baris */
+}
+
+/* Header dengan logo */
+h1 {
+   text-align: center;
+   color: rgb(20, 20, 20);
+}
+
+h2 {
+    text-align: center; /* Judul di tengah */
+    color: #333; /* Warna teks */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 20px 0; /* Jarak atas dan bawah */
+    background-color: #2c66f8;
+}
+
+/* Formulir tambah tugas */
+form {
+    max-width: 550px; /* Lebar maksimal form */
+    margin: 30px auto; /* Menengahkan form di tengah */
+    padding: 20px; /* Memberi ruang di dalam form */
+    background: transparent; /* Latar belakang form berwarna putih */
+    backdrop-filter: blur(100px 100px);
+    border-radius: 8px; /* Membuat sudut form melengkung */
+    box-shadow: 0 24px 88px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan */
+}
+
+form input[type="text"],
+form textarea,
+form input[type="datetime-local"] {
+    width: 95%; /* Lebar penuh */
+    padding: 10px; /* Ruang di dalam input */
+    margin: 10px 0; /* Jarak antar elemen */
+    background:white;
+    border: 1px solid #ddd; /* Garis tipis berwarna abu-abu */
+    border-radius: 5px; /* Sudut input melengkung */
+    font-size: 16px; /* Ukuran font */
+}
+
+form button {
+    background-color: #4CAF50; /* Warna hijau */
+    color: white; /* Warna teks putih */
+    border: none; /* Menghilangkan border */
+    padding: 10px; /* Ruang di dalam tombol */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    cursor: pointer; /* Kursor berubah menjadi tangan */
+    font-size: 16px; /* Ukuran font */
+    transition: background 0.3s ease; /* Efek transisi warna saat hover */
+}
+
+form button:hover {
+    background-color: #45a049; /* Warna tombol saat hover */
+}
+
+/* Layout daftar tugas dua kolom */
+div {
+    display: flex; /* Mengatur layout dengan flexbox */
+    gap: 20px; /* Jarak antar kolom */
+    margin: 20px auto; /* Jarak atas, bawah, dan tengah */
+    width: 90%; /* Lebar kontainer */
+}
+
+/* Daftar tugas */
+ul {
+    list-style: none; /* Menghilangkan bullet pada list */
+    padding: 0;
+    flex: 1; /* Membagi dua kolom sama rata */
+}
+
+li {
+    background: #ffffff; /* Latar belakang putih untuk card */
+    margin: 10px 0; /* Jarak antar card */
+    padding: 20px; /* Ruang di dalam card */
+    border-radius: 8px; /* Membuat sudut melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: transform 0.2s ease-in-out; /* Efek transisi saat hover */
+}
+
+li:hover {
+    transform: translateY(-5px); /* Efek mengangkat card saat hover */
+}
+
+li span {
+    font-size: 18px; /* Ukuran font untuk judul tugas */
+    font-weight: bold; /* Membuat teks lebih tebal */
+    color: #333; /* Warna teks */
+    display: block; /* Membuat elemen span sebagai blok */
+    margin-bottom: 8px; /* Jarak bawah elemen span */
+}
+
+li p {
+    margin: 5px 0; /* Jarak atas dan bawah paragraf */
+    color: #555; /* Warna teks abu-abu gelap */
+}
+
+/* Warna teks untuk status tugas */
+li span[style="color: red;"] {
+    color: #e74c3c; /* Warna merah modern */
+    font-weight: bold; /* Teks tebal */
+}
+
+li span[style="color: green;"] {
+    color: #2ecc71; /* Warna hijau modern */
+    font-weight: bold; /* Teks tebal */
+}
+
+/* Tombol dalam daftar tugas */
+form button[type="submit"],
+form button[formaction] {
+    margin: 5px 5px 0 0; /* Jarak antar tombol */
+    padding: 8px 12px; /* Ruang di dalam tombol */
+    border: none; /* Menghilangkan garis tombol */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    cursor: pointer; /* Kursor tangan */
+    font-size: 14px; /* Ukuran font tombol */
+    color: white; /* Warna teks tombol */
+    transition: background 0.3s ease; /* Efek transisi warna */
+}
+
+/* Warna tombol EDIT */
+form button[formaction*="edit"] {
+    background-color: #f39c12; /* Warna oranye */
+}
+
+form button[formaction*="edit"]:hover {
+    background-color: #e67e22; /* Warna oranye saat hover */
+}
+
+/* Warna tombol HAPUS */
+form button[formaction*="hapus"] {
+    background-color: #e74c3c; /* Warna merah */
+}
+
+form button[formaction*="hapus"]:hover {
+    background-color: #c0392b; /* Warna merah saat hover */
+}
+
+/* Warna tombol SELESAI */
+form button[name="selesai"] {
+    background-color: #3498db; /* Warna biru */
+}
+
+form button[name="selesai"]:hover {
+    background-color: #2980b9; /* Warna biru saat hover */
+}
+
+.form{
+    width: 250px; /* Sesuaikan dengan lebar yang diinginkan */
+    height: 150px; /* Sesuaikan dengan tinggi yang diinginkan */
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-p{
+    margin: 0;
+  }
